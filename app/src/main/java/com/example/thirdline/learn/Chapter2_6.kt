@@ -7,7 +7,12 @@ package com.example.thirdline.learn
 
 fun main() {
     //fun261List()
-    fun261Lambda()
+    //fun261Lambda()
+    printParams(123)
+}
+
+fun printParams(num: Int, str: String = "hello") {
+    println("num is $num , str is $str")
 }
 
 fun fun261List() {
