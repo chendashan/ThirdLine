@@ -1,17 +1,39 @@
-package com.example.thirdline
-
-import com.example.thirdline.learn.CellPhone
+package com.example.thirdline.learn
 
 fun main() {
     println("Learn Kotlin")
 
-    fun243()
+    //fun243()
 
     val phone1 = CellPhone("Xiaomi", 1999.5)
     val phone2 = CellPhone("Xiaomi", 1999.5)
     println(phone1)
     println(phone1 == phone2)
 
+    //Singleton.singletonTest()
+}
+
+fun largerNumber(num1: Int, num2: Int): Int {
+    return if (num1 > num2) {
+        num1
+    } else {
+        num2
+    }
+}
+
+
+fun getScore(name: String) = when (name) {
+    "Tom" -> 93
+    "Sam" -> 84
+    "Jack" -> 52
+    "Lily" -> 60
+    else -> 0
+}
+
+fun checkNumber(number: Number) = when (number) {
+    is Int -> "this is Int"
+    is Double -> "this is Double"
+    else -> "fuck"
 }
 
 fun fun243() {
