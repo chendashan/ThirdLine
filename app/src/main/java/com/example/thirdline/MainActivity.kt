@@ -8,9 +8,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.example.thirdline.databinding.ActivityMainBinding
+import com.example.thirdline.part3.BaseThreeActivity
 import com.example.thirdline.part3.FirstActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseThreeActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

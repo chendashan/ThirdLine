@@ -4,25 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".part3.SecondActivity"
+    tools:context=".part3.StartupModeActivity"
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/bt_second_1"
+        android:id="@+id/bt_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="button 2"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Second Activity"/>
+        android:text="Startup self"/>
 
     <Button
-        android:id="@+id/bt_exit_app"
+        android:id="@+id/bt_start_first"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Exit"/>
+        android:text="startup first"/>
 
 </LinearLayout>

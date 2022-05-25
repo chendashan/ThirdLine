@@ -10,7 +10,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.example.thirdline.R
 import com.example.thirdline.databinding.ActivityFirstBinding
 
-class FirstActivity : AppCompatActivity() {
+class FirstActivity : BaseThreeActivity() {
 
     private val launcherActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         when (it.resultCode) {
@@ -23,6 +23,7 @@ class FirstActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("LaunchMode", this.toString())
         val binding = ActivityFirstBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -40,7 +41,12 @@ class FirstActivity : AppCompatActivity() {
 
             intent2.putExtra("param_data", "this is data")
 
-            startActivity(intent2)
+            //startActivity(intent2)
+            SecondActivity.actionStart(this, "one", "two")
+        }
+
+        binding.btFirstStartup.setOnClickListener {
+            startActivity(Intent(this, StartupModeActivity::class.java))
         }
     }
 }
