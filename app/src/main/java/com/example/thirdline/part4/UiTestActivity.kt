@@ -2,6 +2,7 @@ package com.example.thirdline.part4
 
 import android.app.Dialog
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -28,6 +29,14 @@ class UiTestActivity : AppCompatActivity() {
         }
         binding.includeTitle.btTitleEdit.setOnClickListener {
             Toast.makeText(this, "Click Edit", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btLvTest.setOnClickListener {
+            startActivity(Intent(this, LvTestActivity::class.java))
+        }
+
+        binding.btRcvTest.setOnClickListener {
+            startActivity(Intent(this, RcvTestActivity::class.java))
         }
     }
 
