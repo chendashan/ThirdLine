@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.example.thirdline.databinding.ActivityMainBinding
 import com.example.thirdline.part3.BaseThreeActivity
 import com.example.thirdline.part3.FirstActivity
+import com.example.thirdline.part4.UiTestActivity
 
 class MainActivity : BaseThreeActivity() {
 
@@ -29,6 +30,11 @@ class MainActivity : BaseThreeActivity() {
         }
 
         Log.d("MainActivity", "onCreate() execute")
+
+        binding.btPartFour.setOnClickListener {
+            val intent4 = Intent(this, UiTestActivity::class.java)
+            startActivity(intent4)
+        }
     }
 
     /**

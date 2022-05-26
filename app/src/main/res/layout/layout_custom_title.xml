@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_bg"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/bt_title_back"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/back_bg"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Back"/>
+
+    <TextView
+        android:id="@+id/tv_title_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        tools:text="This is Title"/>
+
+    <TextView
+        android:id="@+id/bt_title_edit"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@drawable/edit_bg"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Edit"/>
+
+</LinearLayout>

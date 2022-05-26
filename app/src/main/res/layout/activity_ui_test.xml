@@ -4,25 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".part4.UiTestActivity"
     android:orientation="vertical">
 
+    <com.example.thirdline.part4.CustomTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/layout_title"/>
+
     <Button
-        android:id="@+id/bt_main"
+        android:id="@+id/bt_open_dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button 1"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Main Activity"
-        android:textSize="20sp"/>
-
-    <Button
-        android:id="@+id/bt_part_four"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Part Four"/>
+        android:textAllCaps="false"
+        android:text="Dialog"/>
 
 </LinearLayout>
