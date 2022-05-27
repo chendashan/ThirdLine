@@ -38,6 +38,10 @@ class UiTestActivity : AppCompatActivity() {
         binding.btRcvTest.setOnClickListener {
             startActivity(Intent(this, RcvTestActivity::class.java))
         }
+
+        binding.btChatTest.setOnClickListener {
+            startActivity(Intent(this, ChatTestActivity::class.java))
+        }
     }
 
     private fun showDialog() {
