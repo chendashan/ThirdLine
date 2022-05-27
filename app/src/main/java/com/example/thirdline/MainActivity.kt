@@ -1,12 +1,12 @@
 package com.example.thirdline
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.thirdline.databinding.ActivityMainBinding
 import com.example.thirdline.part3.BaseThreeActivity
 import com.example.thirdline.part3.FirstActivity
@@ -14,12 +14,18 @@ import com.example.thirdline.part4.UiTestActivity
 
 class MainActivity : BaseThreeActivity() {
 
+    private val list = ArrayList<Part>()
+
+    private lateinit var partAdapter: PartAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //加载布局
         val binding = ActivityMainBinding.inflate(layoutInflater)
         //Binding类的getRoot()函数可以得到activity_main.xml中根元素的实例
         setContentView(binding.root)
+
+        supportActionBar?.title = "MainActivity"
 
         binding.btMain.setOnClickListener {
             Toast.makeText(this, "click main button", Toast.LENGTH_SHORT).show()
@@ -31,10 +37,12 @@ class MainActivity : BaseThreeActivity() {
 
         Log.d("MainActivity", "onCreate() execute")
 
-        binding.btPartFour.setOnClickListener {
-            val intent4 = Intent(this, UiTestActivity::class.java)
-            startActivity(intent4)
-        }
+
+        initPart()
+        partAdapter = PartAdapter(list)
+        binding.rcvMainPart.layoutManager = LinearLayoutManager(this)
+        binding.rcvMainPart.adapter = partAdapter
+
     }
 
     /**
@@ -53,5 +61,12 @@ class MainActivity : BaseThreeActivity() {
                 Toast.makeText(this, "remove item", Toast.LENGTH_SHORT).show()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun initPart() {
+        list.apply {
+            add(Part(4, "Part Four", UiTestActivity::class.java))
+            add(Part(5, "Fragment", PartListActivity::class.java))
+        }
     }
 }
