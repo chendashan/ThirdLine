@@ -18,6 +18,8 @@ class PartListActivity : AppCompatActivity() {
         number = intent.getIntExtra(PartCollector.PARAM_NUMBER, 0)
         title = intent.getStringExtra(PartCollector.PARAM_TITLE)?:""
 
+        supportActionBar?.title = title
+
         val list = PartCollector.getPartList(number)
         val adapter = PartAdapter(list)
         binding.rcvPartList.layoutManager = LinearLayoutManager(this)

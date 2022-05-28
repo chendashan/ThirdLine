@@ -66,7 +66,7 @@ class MainActivity : BaseThreeActivity() {
     private fun initPart() {
         list.apply {
             add(Part(4, "Part Four", UiTestActivity::class.java))
-            add(Part(5, "Fragment", PartListActivity::class.java))
+            add(Part(5, "第5章 Fragment", PartListActivity::class.java))
         }
     }
 }
