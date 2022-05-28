@@ -1,6 +1,7 @@
 package com.example.thirdline
 
 import com.example.thirdline.part5.FragmentTestActivity
+import com.example.thirdline.part11.RetrofitTestActivity
 
 /**
  * @author chendashan
@@ -23,8 +24,8 @@ class PartCollector {
         }
 
         private val list5 = listOf(
-            Part(5, "FragmentTest", FragmentTestActivity::class.java)
-
+            Part(5, "FragmentTest", FragmentTestActivity::class.java),
+            Part(5, "Retrofit Test", RetrofitTestActivity::class.java)
         )
     }
 }
