@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".part5.DogTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".part5.DogOneActivity"
+            android:exported="false" />
+        <activity
             android:name=".part13.RoomTestActivity"
             android:exported="false" />
         <activity

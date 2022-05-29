@@ -5,6 +5,7 @@ import com.example.thirdline.part11.RetrofitTestActivity
 import com.example.thirdline.part12.MaterialActivity
 import com.example.thirdline.part13.JetpackTestActivity
 import com.example.thirdline.part13.RoomTestActivity
+import com.example.thirdline.part5.DogOneActivity
 
 /**
  * @author chendashan
@@ -30,7 +31,8 @@ class PartCollector {
 
         private val list5 = listOf(
             Part(5, "FragmentTest", FragmentTestActivity::class.java),
-            Part(5, "Retrofit Test", RetrofitTestActivity::class.java)
+            Part(5, "Retrofit Test", RetrofitTestActivity::class.java),
+            Part(5, "Parcelable序列化", DogOneActivity::class.java)
         )
 
         private val list13 = listOf(
