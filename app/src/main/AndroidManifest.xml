@@ -17,9 +17,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".part13.RoomTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".part13.JetpackTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".part12.FruitDetailActivity"
             android:exported="false"
-            android:theme="@style/StatusBarTransparent"/>
+            android:theme="@style/StatusBarTransparent" />
         <activity
             android:name=".part12.MaterialActivity"
             android:exported="false"

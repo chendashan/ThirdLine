@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".part13.RoomTestActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sv_room_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <TextView
+            android:id="@+id/tv_room_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_add_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Add Data"/>
+
+    <Button
+        android:id="@+id/bt_update_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update Data"/>
+
+    <Button
+        android:id="@+id/bt_delete_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="delete Data"/>
+
+    <Button
+        android:id="@+id/bt_query_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="query Data"/>
+
+</LinearLayout>
