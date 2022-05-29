@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.thirdline">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,9 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.ThirdLine"
-        tools:targetApi="31"
-        android:usesCleartextTraffic="true">
-
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".part12.FruitDetailActivity"
+            android:exported="false"
+            android:theme="@style/StatusBarTransparent"/>
+        <activity
+            android:name=".part12.MaterialActivity"
+            android:exported="false"
+            android:label="Fruits"
+            android:theme="@style/Theme.MyMaterial" />
         <activity
             android:name=".part11.RetrofitTestActivity"
             android:exported="false" />

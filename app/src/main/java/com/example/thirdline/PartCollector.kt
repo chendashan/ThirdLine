@@ -2,6 +2,7 @@ package com.example.thirdline
 
 import com.example.thirdline.part5.FragmentTestActivity
 import com.example.thirdline.part11.RetrofitTestActivity
+import com.example.thirdline.part12.MaterialActivity
 
 /**
  * @author chendashan

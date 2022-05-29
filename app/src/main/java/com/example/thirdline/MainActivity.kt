@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.thirdline.databinding.ActivityMainBinding
+import com.example.thirdline.part12.MaterialActivity
 import com.example.thirdline.part3.BaseThreeActivity
 import com.example.thirdline.part3.FirstActivity
 import com.example.thirdline.part4.UiTestActivity
@@ -67,6 +68,7 @@ class MainActivity : BaseThreeActivity() {
         list.apply {
             add(Part(4, "Part Four", UiTestActivity::class.java))
             add(Part(5, "第5章 Fragment", PartListActivity::class.java))
+            add(Part(12, "第12章 Material Design", MaterialActivity::class.java))
         }
     }
 }

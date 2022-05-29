@@ -13,4 +13,16 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.MyMaterial" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/green_500</item>
+        <item name="colorPrimaryDark">@color/green_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+
+    </style>
+
+    <style name="StatusBarTransparent" parent="Theme.MyMaterial">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 </resources>
