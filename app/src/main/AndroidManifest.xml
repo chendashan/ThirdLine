@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ThirdLineApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -16,6 +17,10 @@
         android:theme="@style/Theme.ThirdLine"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".weather.WeatherActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyMaterial" />
         <activity
             android:name=".part5.DogTwoActivity"
             android:exported="false" />

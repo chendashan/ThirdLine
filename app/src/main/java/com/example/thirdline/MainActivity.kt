@@ -13,6 +13,7 @@ import com.example.thirdline.part13.JetpackTestActivity
 import com.example.thirdline.part3.BaseThreeActivity
 import com.example.thirdline.part3.FirstActivity
 import com.example.thirdline.part4.UiTestActivity
+import com.example.thirdline.weather.WeatherActivity
 
 class MainActivity : BaseThreeActivity() {
 
@@ -71,6 +72,7 @@ class MainActivity : BaseThreeActivity() {
             add(Part(5, "第5章 Fragment", PartListActivity::class.java))
             add(Part(12, "第12章 Material Design", MaterialActivity::class.java))
             add(Part(13, "第13章 Jetpack", PartListActivity::class.java))
+            add(Part(15, "第15章 天气App", WeatherActivity::class.java))
         }
     }
 }
