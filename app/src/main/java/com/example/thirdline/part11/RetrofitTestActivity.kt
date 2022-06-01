@@ -21,13 +21,20 @@ class RetrofitTestActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btRequestData.setOnClickListener {
+            //使用Retrofit.Builder来构建一个Retrofit对象
             val retrofit = Retrofit.Builder()
+                    //指定所有请求的根路径
                 .baseUrl("http://10.0.2.2/")
+                    //指定解析数据时所使用的转换库
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
+            //调用create()方法，传入具体Service接口的Class类型，创建一个该接口的动态代理对象
             val appService = retrofit.create(AppService::class.java)
+            //调用接口里的方法返回一个Call<T>对象，在调用这个对象的enqueue()方法就会进行网络请求了
+            //enqueue()传入Callback接口的实现
             appService.getAppData().enqueue(object : Callback<List<App>> {
                 override fun onResponse(call: Call<List<App>>, response: Response<List<App>>) {
+                    //调用response.body()方法将会得到解析后的对象
                     val list = response.body()
                     if (list != null) {
                         for (app in list) {
