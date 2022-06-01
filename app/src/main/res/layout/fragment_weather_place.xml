@@ -10,15 +10,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:src="@drawable/bg_place"/>
-    <FrameLayout
+
+    <LinearLayout
         android:id="@+id/actionBarLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/green_500">
+
         <EditText
             android:id="@+id/searchPlaceEdit"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
@@ -26,7 +29,25 @@
             android:paddingEnd="10dp"
             android:hint="输入地址"
             android:background="@drawable/search_bg"/>
-    </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_place_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/shape_search_bg"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="搜索" />
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

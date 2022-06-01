@@ -17,7 +17,10 @@ object WeatherNetwork {
 
     suspend fun searchPlaces(query: String) = placeService.searchPlaces(query).await()
 
+    //定义await()函数为挂起函数和 Call<T> 的扩展函数
     private suspend fun <T> Call<T>.await(): T {
+        // suspendCoroutine函数挂起当前协程，然后在普通线程中执行Lambda表达式里的代码
+        //传入的参数continuation用于让协程恢复执行
         return suspendCoroutine { continuation ->
             enqueue(object : Callback<T> {
                 override fun onResponse(call: Call<T>, response: Response<T>) {

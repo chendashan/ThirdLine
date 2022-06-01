@@ -46,8 +46,8 @@ class PlaceFragment : Fragment() {
         adapter = PlaceAdapter(this, viewModel.placeList)
         binding.recyclerView.adapter = adapter
 
-        binding.searchPlaceEdit.addTextChangedListener {
-            val content = it.toString()
+        binding.tvPlaceSearch.setOnClickListener {
+            val content = binding.searchPlaceEdit.text.toString()
             if (content.isNotEmpty()) {
                 viewModel.searchPlace(content)
             } else {
@@ -56,6 +56,9 @@ class PlaceFragment : Fragment() {
                 viewModel.placeList.clear()
                 adapter.notifyDataSetChanged()
             }
+        }
+        binding.searchPlaceEdit.addTextChangedListener {
+
         }
 
         viewModel.placeLiveData.observe(viewLifecycleOwner, Observer{result ->
