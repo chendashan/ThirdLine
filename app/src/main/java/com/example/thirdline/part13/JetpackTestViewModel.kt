@@ -6,9 +6,11 @@ import androidx.lifecycle.ViewModel
 
 class JetpackTestViewModel(countReserved: Int) : ViewModel() {
 
+    // LiveData 声明为不可变的
     val counter: LiveData<Int>
         get() = _counter
 
+    // MutableLiveData 声明为可变的
     private val _counter = MutableLiveData<Int>()
 
     init {
