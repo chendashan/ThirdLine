@@ -18,6 +18,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".weather.SearchPlacesActivity"
+            android:exported="false" />
+        <activity
             android:name=".weather.WeatherActivity"
             android:exported="false"
             android:theme="@style/Theme.MyMaterial" />

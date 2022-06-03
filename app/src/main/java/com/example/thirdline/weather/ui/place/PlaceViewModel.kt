@@ -29,4 +29,10 @@ class PlaceViewModel : ViewModel() {
         //改变了searchLiveData的值，就相当于执行了Repository里liveData()的代码块
         searchLiveData.value = query
     }
+
+    fun savePlace(place: Place) = Repository.savePlace(place)
+
+    fun getSavePlace() = Repository.getSavePlace()
+
+    fun isPlaceSaved() = Repository.isPlaceSaved()
 }
